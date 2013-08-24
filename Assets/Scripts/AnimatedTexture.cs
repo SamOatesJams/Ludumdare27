@@ -8,12 +8,12 @@ public class AnimatedTexture : MonoBehaviour {
 	public bool m_randomStartFrame = false;
 	public bool m_pingPong = false;
 	
-	private int m_currentColumn = 0;
-	private float m_lastFrameTime = 0.0f;
-	private int m_nextFrame = 1;
+	protected int m_currentColumn = 0;
+	protected float m_lastFrameTime = 0.0f;
+	protected int m_nextFrame = 1;
 	
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 	
 		if (m_randomStartFrame)
 		{
@@ -21,10 +21,13 @@ public class AnimatedTexture : MonoBehaviour {
 		}
 		m_lastFrameTime = Time.time;
 		
+		Vector2 scale = new Vector2(1.0f / m_numberOfColumns, 1.0f);
+		this.renderer.material.mainTextureScale = scale;
+		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void Update () {
 	
 		if (Time.time - m_lastFrameTime >= (1.0f / m_frameRate)) {
 			m_currentColumn += m_nextFrame;

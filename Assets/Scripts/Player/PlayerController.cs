@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
 	private float m_glitchTime = 0.0f;
 	private Vector3 m_spawnPosition = Vector3.zero;
 	private float m_spawnTime = 0.0f;
+	private bool m_doGlitch = false;
 	
 	
 	/**
@@ -50,28 +51,26 @@ public class PlayerController : MonoBehaviour {
 		float leftRight = Input.GetAxis("Horizontal") * (m_jumpState == JumpState.Jumping ? 0.5f : 1.0f);
 		
 		float upDown = Input.GetAxis("Vertical");
+		float upPower = 0.0f;
 		if (m_jumpState == JumpState.Landed)
 		{
 			if (m_jumpTime == 0.0f && upDown > 0.1f)
 			{
+				m_doGlitch = false;
 				m_jumpState = JumpState.Jumping;
-				upDown = m_jumpHeight;
+				upPower = m_jumpHeight;
 				m_jumpTime = Time.time;
 			}
-			else if (m_glitchTime == 0.0f && upDown < -0.9f)
-			{
-				m_glitchTime = Time.time;
-				this.transform.position = this.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
-				Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
-			}
 		}
-		else
+
+		if (m_glitchTime == 0.0f && upDown < -0.9f && m_jumpState == JumpState.Jumping)
 		{
-			upDown = 0.0f;	
+			m_doGlitch = true;	
 		}
 	
 		if (m_glitchTime != 0.0f && Time.time - m_glitchTime >= 10.0f)
 		{
+			m_doGlitch = false;
 			m_glitchTime = 0.0f;
 			this.transform.position = this.transform.position + new Vector3(0.0f, 200.0f, 0.0f);
 			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
@@ -82,7 +81,7 @@ public class PlayerController : MonoBehaviour {
 			m_jumpTime = 0.0f;
 		}
 		
-		this.rigidbody.AddForce(new Vector3(leftRight * m_speedModifier, upDown * m_speedModifier, 0.0f));
+		this.rigidbody.AddForce(new Vector3(leftRight * m_speedModifier, upPower * m_speedModifier, 0.0f));
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);		
 	}
 	
@@ -93,12 +92,19 @@ public class PlayerController : MonoBehaviour {
 	{
 		foreach (ContactPoint contact in collision.contacts)
 		{
-			if (Vector3.Dot(contact.normal, Vector3.up) > 0.75f)
+			if (Vector3.Dot(contact.normal, Vector3.up) > 0.9f)
 			{
 				if (m_jumpState == JumpState.Jumping)
 				{
 					m_jumpState = JumpState.Landed;
 					m_jumpTime = Time.time;
+					if (m_doGlitch) 
+					{
+						m_glitchTime = Time.time;
+						this.transform.position = this.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
+						Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
+						m_doGlitch = false;	
+					}
 					return;
 				}
 			}
