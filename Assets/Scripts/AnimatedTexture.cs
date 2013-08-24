@@ -21,7 +21,7 @@ public class AnimatedTexture : MonoBehaviour {
 		}
 		m_lastFrameTime = Time.time;
 		
-		Vector2 scale = new Vector2(1.0f / m_numberOfColumns, 1.0f);
+		Vector2 scale = new Vector2(1.0f / m_numberOfColumns, this.renderer.material.mainTextureScale.y);
 		this.renderer.material.mainTextureScale = scale;
 		
 	}
@@ -41,7 +41,7 @@ public class AnimatedTexture : MonoBehaviour {
 			}
 			m_lastFrameTime = Time.time;
 		
-			Vector2 offset = new Vector2(m_currentColumn * (1.0f / m_numberOfColumns), 0.0f);
+			Vector2 offset = new Vector2(m_currentColumn * (1.0f / m_numberOfColumns), this.renderer.material.mainTextureOffset.y);
 			this.renderer.material.mainTextureOffset = offset;
 		}
 		
