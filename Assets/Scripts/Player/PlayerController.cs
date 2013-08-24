@@ -26,8 +26,10 @@ public class PlayerController : MonoBehaviour {
 	*/	
 
 	private JumpState m_jumpState = JumpState.Landed;
+	private float m_jumpTime = 0.0f;
 	private float m_glitchTime = 0.0f;
 	private Vector3 m_spawnPosition = Vector3.zero;
+	private float m_spawnTime = 0.0f;
 	
 	
 	/**
@@ -41,16 +43,20 @@ public class PlayerController : MonoBehaviour {
 		\brief Update is called once per frame
 	*/
 	void Update () {
-
+		
+		if (m_spawnTime != 0.0f && Time.time - m_spawnTime < 0.5f)
+			return;
+		
 		float leftRight = Input.GetAxis("Horizontal") * (m_jumpState == JumpState.Jumping ? 0.5f : 1.0f);
 		
 		float upDown = Input.GetAxis("Vertical");
 		if (m_jumpState == JumpState.Landed)
 		{
-			if (upDown > 0.1f)
+			if (m_jumpTime == 0.0f && upDown > 0.1f)
 			{
 				m_jumpState = JumpState.Jumping;
 				upDown = m_jumpHeight;
+				m_jumpTime = Time.time;
 			}
 			else if (m_glitchTime == 0.0f && upDown < -0.9f)
 			{
@@ -71,6 +77,11 @@ public class PlayerController : MonoBehaviour {
 			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
 		}
 		
+		if (m_jumpTime != 0.0f && Time.time - m_jumpTime >= 0.2f)
+		{
+			m_jumpTime = 0.0f;
+		}
+		
 		this.rigidbody.AddForce(new Vector3(leftRight * m_speedModifier, upDown * m_speedModifier, 0.0f));
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);		
 	}
@@ -84,8 +95,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			if (Vector3.Dot(contact.normal, Vector3.up) > 0.75f)
 			{
-				m_jumpState = JumpState.Landed;
-				return;
+				if (m_jumpState == JumpState.Jumping)
+				{
+					m_jumpState = JumpState.Landed;
+					m_jumpTime = Time.time;
+					return;
+				}
 			}
 		}
 	}
@@ -112,13 +127,20 @@ public class PlayerController : MonoBehaviour {
 	public void KillPlayer()
 	{
 		this.transform.position = m_spawnPosition;
+		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 		this.rigidbody.velocity = Vector3.zero;
-		m_jumpState = JumpState.Landed;
+		
 		m_health = FULLHEALTH;
+		
+		m_jumpState = JumpState.Landed;
+		m_jumpTime = 0.0f;
+				
 		if (m_glitchTime != 0.0f)
 		{
 			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
+			m_glitchTime = 0.0f;
 		}
-		m_glitchTime = 0.0f;
+		
+		m_spawnTime = Time.time;
 	}
 }
