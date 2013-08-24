@@ -11,7 +11,7 @@ public class EndPortal : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		if (NextLevelName == null) {
+		if (NextLevelName == null || NextLevelName.Length == 0) {
 			Debug.LogWarning("Portal has no destination");			
 			this.enabled = false;
 		}

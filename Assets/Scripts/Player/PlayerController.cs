@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour {
 		Jumping
 	};
 	
+	const int FULLHEALTH = 10;
+	
 	/**
 		Public variables 
 	*/
-	public int m_health = 10;					//!< The health of the player
+	public int m_health = FULLHEALTH;			//!< The health of the player
 	public float m_speedModifier = 200.0f;		//!< A scalar to apply to all movement speeds
 	public float m_jumpHeight = 20.0f;			//!< The upwards force of the player jump
 	
@@ -25,13 +27,14 @@ public class PlayerController : MonoBehaviour {
 
 	private JumpState m_jumpState = JumpState.Landed;
 	private float m_glitchTime = 0.0f;
+	private Vector3 m_spawnPosition = Vector3.zero;
 	
 	
 	/**
 		\brief Use this for initialization
 	*/
 	void Start () {
-		
+		m_spawnPosition = this.transform.position;
 	}
 	
 	/**
@@ -53,6 +56,7 @@ public class PlayerController : MonoBehaviour {
 			{
 				m_glitchTime = Time.time;
 				this.transform.position = this.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
+				Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
 			}
 		}
 		else
@@ -64,10 +68,11 @@ public class PlayerController : MonoBehaviour {
 		{
 			m_glitchTime = 0.0f;
 			this.transform.position = this.transform.position + new Vector3(0.0f, 200.0f, 0.0f);
+			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
 		}
 		
 		this.rigidbody.AddForce(new Vector3(leftRight * m_speedModifier, upDown * m_speedModifier, 0.0f));
-		
+		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);		
 	}
 	
 	/**
@@ -85,7 +90,35 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 	
+	/**
+		\brief Get the glitch time remaining
+	*/
 	public float GetGlitchTimeRemaining() {
 		return m_glitchTime != 0.0f ? Time.time - m_glitchTime : 0.0f;
+	}
+	
+	/**
+		\brief Called when the player enters a trigger
+	*/
+	void OnTriggerEnter(Collider other) {
+		
+		// Handle water (should this be here or in a water script?)
+		if (other.tag == "WaterBlock")
+		{
+			KillPlayer();
+		}
+	}
+	
+	public void KillPlayer()
+	{
+		this.transform.position = m_spawnPosition;
+		this.rigidbody.velocity = Vector3.zero;
+		m_jumpState = JumpState.Landed;
+		m_health = FULLHEALTH;
+		if (m_glitchTime != 0.0f)
+		{
+			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
+		}
+		m_glitchTime = 0.0f;
 	}
 }
