@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 10, z: 0}
+  m_LocalPosition: {x: -30, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -317,6 +317,9 @@ MonoBehaviour:
   m_deadTexture: {fileID: 2800000, guid: cd8176aaa399fef40a4195c8a1f43c6d, type: 3}
   m_deadTextureBlocked: {fileID: 2800000, guid: 879d1aeb905d14f4ea98a8db55cafaff,
     type: 3}
+  m_textureMute: {fileID: 2800000, guid: e3135ec7aeccc9845a94b6555e0aabd7, type: 3}
+  m_textureSound: {fileID: 2800000, guid: 23632b9363cb2b14db3a1ccb98f6de2d, type: 3}
+  m_skin: {fileID: 11400000, guid: 37396effcca35a14f8fe22948af1a314, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,6 +7,11 @@ public class PlayerGUI : MonoBehaviour {
 	public Texture2D m_deadTexture = null;
 	public Texture2D m_deadTextureBlocked = null;
 	
+	public Texture2D m_textureMute = null;
+	public Texture2D m_textureSound = null;
+	
+	public GUISkin m_skin = null;
+	
 	private PlayerController m_player = null;
 	
 	// Use this for initialization
@@ -20,6 +25,23 @@ public class PlayerGUI : MonoBehaviour {
 	}
 	
 	void OnGUI() {
+		
+		GUI.skin = m_skin;
+		
+		int soundsize = (int)(Screen.width * 0.05f);
+		bool mute = GUI.Button(
+			new Rect(
+				Screen.width - soundsize - (Screen.width * 0.005f),
+				Screen.height - soundsize - (Screen.width * 0.005f),
+				soundsize, 
+				soundsize), 
+				AudioListener.pause ? m_textureMute : m_textureSound
+			);
+		
+		if (mute)
+		{
+			AudioListener.pause = !AudioListener.pause;
+		}
 		
 		if (m_player.IsDead())
 		{
