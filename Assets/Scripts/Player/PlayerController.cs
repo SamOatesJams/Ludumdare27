@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour {
 	public float m_speedModifier = 200.0f;		//!< A scalar to apply to all movement speeds
 	public float m_jumpHeight = 20.0f;			//!< The upwards force of the player jump
 	
+	public AudioClip[] m_jumpSounds = null;
+	public AudioClip[] m_deadSounds = null;
+	
 	/**
 		Private variables 
 	*/	
@@ -36,6 +39,9 @@ public class PlayerController : MonoBehaviour {
 	private GameObject m_blackQuad = null;
 	private float m_blackTime = 0.0f;
 	
+	private AudioSource m_glitchSound = null;
+	private AudioSource m_audio = null;
+	
 	
 	/**
 		\brief Use this for initialization
@@ -45,6 +51,10 @@ public class PlayerController : MonoBehaviour {
 		m_texture = this.GetComponentInChildren<AnimatedPlayerTexture>();
 		m_blackQuad = Camera.main.transform.FindChild("black-quad").gameObject;
 		m_blackQuad.SetActive(false);
+		
+		m_glitchSound = this.transform.FindChild("glitch-sound").GetComponent<AudioSource>();
+		
+		m_audio = this.GetComponent<AudioSource>();
 	}
 	
 	/**
@@ -52,8 +62,14 @@ public class PlayerController : MonoBehaviour {
 	*/
 	void Update () {
 		
-		if (m_spawnTime != 0.0f && Time.time - m_spawnTime < 0.5f)
+		if (m_spawnTime != 0.0f && Time.time - m_spawnTime < 2.0f)
 			return;
+		else if (m_spawnTime != 0.0f && Time.time - m_spawnTime >= 2.0f)
+		{
+			// hide you dead image
+			m_audio.pitch = 1.0f;
+			m_spawnTime = 0.0f;
+		}
 
 		if (m_blackTime != 0.0f)
 		{
@@ -70,11 +86,13 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		string currentAnimation = "idle";
+		int frameRate = 4;
 		float leftRight = Input.GetAxis("Horizontal") * (m_jumpState == JumpState.Jumping ? 0.5f : 1.0f);
 		
 		if (leftRight != 0.0f)
 		{
 			currentAnimation = "walk";
+			frameRate = 7;
 		}
 		
 		float upDown = Input.GetAxis("Vertical");
@@ -87,11 +105,16 @@ public class PlayerController : MonoBehaviour {
 				m_jumpState = JumpState.Jumping;
 				upPower = m_jumpHeight;
 				m_jumpTime = Time.time;
+				
+				AudioClip clip = m_jumpSounds[Random.Range(0, m_jumpSounds.Length)];
+				m_audio.clip = clip;
+				m_audio.Play();
 			}
 		}
 		
 		if (m_glitchTime != 0.0f)
 		{
+			frameRate *= 20;
 			if (Random.Range(0, 2) == 0)
 			{
 				m_blackQuad.SetActive(!m_blackQuad.activeSelf);
@@ -114,16 +137,18 @@ public class PlayerController : MonoBehaviour {
 			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
 			m_blackQuad.SetActive(true);
 			m_blackTime = Time.time;
+			m_audio.pitch = 1.0f;	
 		}
 		
 		if (m_jumpTime != 0.0f && Time.time - m_jumpTime >= 0.2f)
 		{
 			m_jumpTime = 0.0f;
 		}
-		
+
+		m_texture.m_frameRate = frameRate;
 		m_texture.SetCurrentAnimation(currentAnimation, leftRight < 0.0f);
 		
-		this.rigidbody.AddForce(new Vector3(leftRight * m_speedModifier, upPower * m_speedModifier, 0.0f));
+		this.rigidbody.AddForce(new Vector3(leftRight * (m_speedModifier * (m_glitchTime == 0.0f ? 1.0f : 1.5f)), upPower * (800.0f * (m_glitchTime == 0.0f ? 1.0f : 1.1f)), 0.0f));
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);		
 	}
 	
@@ -146,6 +171,8 @@ public class PlayerController : MonoBehaviour {
 						this.transform.position = this.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
 						Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, -200.0f, 0.0f); 
 						m_doGlitch = false;	
+						m_glitchSound.Play();
+						m_audio.pitch = 2.0f;
 					}
 					return;
 				}
@@ -174,6 +201,10 @@ public class PlayerController : MonoBehaviour {
 	
 	public void KillPlayer()
 	{
+		AudioClip clip = m_deadSounds[Random.Range(0, m_deadSounds.Length)];
+		m_audio.clip = clip;
+		m_audio.Play();
+		
 		this.transform.position = m_spawnPosition;
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 		this.rigidbody.velocity = Vector3.zero;
@@ -189,9 +220,12 @@ public class PlayerController : MonoBehaviour {
 			m_glitchTime = 0.0f;
 		}
 		
+		m_texture.m_frameRate = 4;
 		m_texture.SetCurrentAnimation("idle", false);
 		m_blackQuad.SetActive(false);
 		m_blackTime = 0.0f;
+		
+		m_glitchSound.Stop();
 		
 		m_spawnTime = Time.time;
 	}

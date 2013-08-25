@@ -15,7 +15,7 @@ public class AnimatedPlayerTexture : AnimatedTexture {
 		base.Start();
 		
 		m_keyFrame.Add("idle", new Vector2(0, 7));
-		m_keyFrame.Add("walk", new Vector2(8, 15));
+		m_keyFrame.Add("walk", new Vector2(8, 13));
 		
 		if (!m_keyFrame.ContainsKey(m_currentAnimation))
 		{
@@ -45,7 +45,7 @@ public class AnimatedPlayerTexture : AnimatedTexture {
 				m_currentColumn = (int)key.x;
 			}
 			
-			int xFrame = m_currentColumn % m_numberOfColumns;
+			int xFrame = m_currentColumn % m_numberOfColumns + (m_flippedHorizontal ? 1 : 0);
 			int yFrame = Mathf.FloorToInt(m_currentColumn / m_numberOfColumns);	
 		
 			Vector2 offset = new Vector2(xFrame * (1.0f / m_numberOfColumns), 1.0f - ((yFrame + 1) * (1.0f / m_numberOfRows)));
