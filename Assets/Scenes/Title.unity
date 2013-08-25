@@ -271,6 +271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 4
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 1
@@ -366,6 +368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 4
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 1

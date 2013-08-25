@@ -11,13 +11,11 @@ public class PlayerController : MonoBehaviour {
 		Landed,
 		Jumping
 	};
-	
-	const int FULLHEALTH = 10;
-	
+			
 	/**
 		Public variables 
 	*/
-	public int m_health = FULLHEALTH;			//!< The health of the player
+	public int m_lives = 3;
 	public float m_speedModifier = 200.0f;		//!< A scalar to apply to all movement speeds
 	public float m_jumpHeight = 20.0f;			//!< The upwards force of the player jump
 	
@@ -42,6 +40,8 @@ public class PlayerController : MonoBehaviour {
 	private AudioSource m_glitchSound = null;
 	private AudioSource m_audio = null;
 	
+	private static int m_score = 0;	
+	private int m_levelStartScore = 0;
 	
 	/**
 		\brief Use this for initialization
@@ -55,6 +55,9 @@ public class PlayerController : MonoBehaviour {
 		m_glitchSound = this.transform.FindChild("glitch-sound").GetComponent<AudioSource>();
 		
 		m_audio = this.GetComponent<AudioSource>();
+		
+		m_score += 10000;
+		m_levelStartScore = m_score;
 	}
 	
 	/**
@@ -70,7 +73,7 @@ public class PlayerController : MonoBehaviour {
 			m_audio.pitch = 1.0f;
 			m_spawnTime = 0.0f;
 		}
-
+				
 		if (m_blackTime != 0.0f)
 		{
 			if (Time.time - m_blackTime >= 2.0f)
@@ -84,6 +87,10 @@ public class PlayerController : MonoBehaviour {
 				m_blackQuad.renderer.material.mainTextureOffset = new Vector2(0, Random.Range(0, 100) * 0.01f);
 			}
 		}
+		
+		m_score--;
+		if (m_score < 0)
+			m_score = 0;
 		
 		string currentAnimation = "idle";
 		int frameRate = 4;
@@ -219,13 +226,21 @@ public class PlayerController : MonoBehaviour {
 		m_audio.clip = clip;
 		m_audio.Play();
 		
+		m_lives--;
+		if (m_lives < 0)
+		{
+			Application.LoadLevel("Title");	
+		}
+		
+		m_levelStartScore -= 2500;
+		if (m_levelStartScore < 0) m_levelStartScore = 0;
+		m_score = m_levelStartScore;
+		
 		Camera.main.GetComponent<AudioSource>().mute = true;
 		
 		this.transform.position = m_spawnPosition;
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 		this.rigidbody.velocity = Vector3.zero;
-		
-		m_health = FULLHEALTH;
 		
 		m_jumpState = JumpState.Landed;
 		m_jumpTime = 0.0f;
@@ -249,5 +264,10 @@ public class PlayerController : MonoBehaviour {
 	public bool IsDead()
 	{
 		return m_spawnTime != 0.0f;
+	}
+	
+	public string GetScoreString()
+	{
+		return m_score.ToString("000000000#");
 	}
 }
