@@ -7,6 +7,7 @@ public class AnimatedTexture : MonoBehaviour {
 	public int m_frameRate = 10;
 	public bool m_randomStartFrame = false;
 	public bool m_pingPong = false;
+	public bool m_random = false;
 	
 	protected int m_currentColumn = 0;
 	protected float m_lastFrameTime = 0.0f;
@@ -30,7 +31,13 @@ public class AnimatedTexture : MonoBehaviour {
 	public void Update () {
 	
 		if (Time.time - m_lastFrameTime >= (1.0f / m_frameRate)) {
-			m_currentColumn += m_nextFrame;
+			
+			if (!m_random) {
+				m_currentColumn += m_nextFrame;
+			} else {
+				m_currentColumn = Random.Range(0, m_numberOfColumns);
+			}
+			
 			if (m_currentColumn > (m_numberOfColumns - 1) || m_currentColumn < 0) {
 				if (!m_pingPong) {
 					m_currentColumn = 0;
