@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 			return;
 		else if (m_spawnTime != 0.0f && Time.time - m_spawnTime >= 2.0f)
 		{
-			// hide you dead image
+			Camera.main.GetComponent<AudioSource>().mute = false;
 			m_audio.pitch = 1.0f;
 			m_spawnTime = 0.0f;
 		}
@@ -205,6 +205,8 @@ public class PlayerController : MonoBehaviour {
 		m_audio.clip = clip;
 		m_audio.Play();
 		
+		Camera.main.GetComponent<AudioSource>().mute = true;
+		
 		this.transform.position = m_spawnPosition;
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 		this.rigidbody.velocity = Vector3.zero;
@@ -228,5 +230,10 @@ public class PlayerController : MonoBehaviour {
 		m_glitchSound.Stop();
 		
 		m_spawnTime = Time.time;
+	}
+	
+	public bool IsDead()
+	{
+		return m_spawnTime != 0.0f;
 	}
 }

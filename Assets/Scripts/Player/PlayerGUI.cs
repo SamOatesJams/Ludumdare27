@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerGUI : MonoBehaviour {
 	
 	public Texture2D m_glitchProgressbarTexture = null;
+	public Texture2D m_deadTexture = null;
+	public Texture2D m_deadTextureBlocked = null;
 	
 	private PlayerController m_player = null;
 	
@@ -18,6 +20,15 @@ public class PlayerGUI : MonoBehaviour {
 	}
 	
 	void OnGUI() {
+		
+		if (m_player.IsDead())
+		{
+			int size = Mathf.Min(Screen.width, Screen.height);
+			int x = (int)((Screen.width - size) * 0.5f);
+			int y = (int)((Screen.height - size) * 0.5f);			
+			GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), m_deadTextureBlocked);	
+			GUI.DrawTexture(new Rect(x, y, size, size), m_deadTexture);	
+		}
 		
 		float glitchProgress = 1.0f - (m_player.GetGlitchTimeRemaining() / 10.0f);
 		
