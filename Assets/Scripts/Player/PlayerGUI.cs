@@ -21,12 +21,17 @@ public class PlayerGUI : MonoBehaviour {
 		
 		float glitchProgress = 1.0f - (m_player.GetGlitchTimeRemaining() / 10.0f);
 		
+		if (glitchProgress == 1.0f)
+			return;
+		
 		// Draw the glitch remaing progress bar
+		float width = Screen.width * 0.9f;
+		
 		Rect glitchBackgroundProgressbar = new Rect();
-		glitchBackgroundProgressbar.x = Screen.width * 0.01f;
+		glitchBackgroundProgressbar.x = (Screen.width - width) * 0.5f;
 		glitchBackgroundProgressbar.y = Screen.height * 0.01f;
-		glitchBackgroundProgressbar.width = Screen.width * 0.2f;
-		glitchBackgroundProgressbar.height = Screen.height * 0.05f;
+		glitchBackgroundProgressbar.width = width;
+		glitchBackgroundProgressbar.height = Screen.height * 0.1f;
 		
 		Rect glitchProgressbar = glitchBackgroundProgressbar;
 		glitchProgressbar.x += 2.0f;

@@ -28,7 +28,7 @@ public class AnimatedGlitchTexture : AnimatedTexture {
 				
 				int randomFrame = Random.Range(0, m_numberOfColumnsInGlitchTexture - 1);
 				float frameWidth = 1.0f / m_numberOfColumnsInGlitchTexture;
-				this.renderer.material.mainTextureScale = new Vector2(frameWidth * randomFrame, 1.0f);
+				this.renderer.material.mainTextureScale = new Vector2(frameWidth, 1.0f);
 				this.renderer.material.mainTextureOffset = new Vector2(frameWidth * randomFrame, 1.0f);
 				m_lastFrameTime = Time.time;
 			}	

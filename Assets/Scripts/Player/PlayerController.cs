@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour {
 	private Vector3 m_spawnPosition = Vector3.zero;
 	private float m_spawnTime = 0.0f;
 	private bool m_doGlitch = false;
+	private AnimatedPlayerTexture m_texture = null;
+	
+	private GameObject m_blackQuad = null;
+	private float m_blackTime = 0.0f;
 	
 	
 	/**
@@ -38,6 +42,9 @@ public class PlayerController : MonoBehaviour {
 	*/
 	void Start () {
 		m_spawnPosition = this.transform.position;
+		m_texture = this.GetComponentInChildren<AnimatedPlayerTexture>();
+		m_blackQuad = Camera.main.transform.FindChild("black-quad").gameObject;
+		m_blackQuad.SetActive(false);
 	}
 	
 	/**
@@ -47,8 +54,28 @@ public class PlayerController : MonoBehaviour {
 		
 		if (m_spawnTime != 0.0f && Time.time - m_spawnTime < 0.5f)
 			return;
+
+		if (m_blackTime != 0.0f)
+		{
+			if (Time.time - m_blackTime >= 2.0f)
+			{
+				m_blackTime = 0.0f;
+				m_blackQuad.SetActive(false);
+			}
+			else if (Random.Range(0, 4) == 0)
+			{
+				m_blackQuad.SetActive(!m_blackQuad.activeSelf);
+				m_blackQuad.renderer.material.mainTextureOffset = new Vector2(0, Random.Range(0, 100) * 0.01f);
+			}
+		}
 		
+		string currentAnimation = "idle";
 		float leftRight = Input.GetAxis("Horizontal") * (m_jumpState == JumpState.Jumping ? 0.5f : 1.0f);
+		
+		if (leftRight != 0.0f)
+		{
+			currentAnimation = "walk";
+		}
 		
 		float upDown = Input.GetAxis("Vertical");
 		float upPower = 0.0f;
@@ -62,10 +89,21 @@ public class PlayerController : MonoBehaviour {
 				m_jumpTime = Time.time;
 			}
 		}
+		
+		if (m_glitchTime != 0.0f)
+		{
+			if (Random.Range(0, 2) == 0)
+			{
+				m_blackQuad.SetActive(!m_blackQuad.activeSelf);
+				m_blackQuad.renderer.material.mainTextureOffset = new Vector2(0, Random.Range(0, 100) * 0.01f);
+			}	
+		}
 
 		if (m_glitchTime == 0.0f && upDown < -0.9f && m_jumpState == JumpState.Jumping)
 		{
 			m_doGlitch = true;	
+			m_blackQuad.SetActive(true);
+			m_blackTime = Time.time;
 		}
 	
 		if (m_glitchTime != 0.0f && Time.time - m_glitchTime >= 10.0f)
@@ -74,12 +112,16 @@ public class PlayerController : MonoBehaviour {
 			m_glitchTime = 0.0f;
 			this.transform.position = this.transform.position + new Vector3(0.0f, 200.0f, 0.0f);
 			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
+			m_blackQuad.SetActive(true);
+			m_blackTime = Time.time;
 		}
 		
 		if (m_jumpTime != 0.0f && Time.time - m_jumpTime >= 0.2f)
 		{
 			m_jumpTime = 0.0f;
 		}
+		
+		m_texture.SetCurrentAnimation(currentAnimation, leftRight < 0.0f);
 		
 		this.rigidbody.AddForce(new Vector3(leftRight * m_speedModifier, upPower * m_speedModifier, 0.0f));
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);		
@@ -92,7 +134,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		foreach (ContactPoint contact in collision.contacts)
 		{
-			if (Vector3.Dot(contact.normal, Vector3.up) > 0.9f)
+			if (Vector3.Dot(contact.normal, Vector3.up) > 0.5f)
 			{
 				if (m_jumpState == JumpState.Jumping)
 				{
@@ -146,6 +188,10 @@ public class PlayerController : MonoBehaviour {
 			Camera.main.transform.position = Camera.main.transform.position + new Vector3(0.0f, 200.0f, 0.0f); 
 			m_glitchTime = 0.0f;
 		}
+		
+		m_texture.SetCurrentAnimation("idle", false);
+		m_blackQuad.SetActive(false);
+		m_blackTime = 0.0f;
 		
 		m_spawnTime = Time.time;
 	}

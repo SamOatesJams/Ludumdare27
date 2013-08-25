@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: player-mesh
   m_TagString: Untagged
@@ -44,7 +45,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: gui
   m_TagString: Untagged
@@ -159,14 +159,18 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
+  m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 255e2cbfb58b35a4882b1b0ffea6d294, type: 3}
+  m_Script: {fileID: 11500000, guid: 428809502c0df514b964f92084d93cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_glitchProgressbarTexture: {fileID: 2800000, guid: e1bd5e76d63138c44bd3a4166f86a855,
-    type: 3}
+  m_numberOfColumns: 8
+  m_frameRate: 4
+  m_randomStartFrame: 0
+  m_pingPong: 0
+  m_currentAnimation: idle
+  m_numberOfRows: 8
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
