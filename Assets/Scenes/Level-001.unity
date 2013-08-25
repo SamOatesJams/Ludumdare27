@@ -189,6 +189,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &58842541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -380,6 +381,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &89502897
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +584,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &135862949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -970,6 +973,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &179697830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1174,6 +1178,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &257793892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1393,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &277840589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1494,6 +1500,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 0
   m_pingPong: 0
+  m_random: 0
   m_glitchTexture: {fileID: 2800000, guid: 94428508a3c1c2d43a9ed28322e60189, type: 3}
   m_numberOfColumnsInGlitchTexture: 8
   m_glitchChance: 10
@@ -1773,6 +1780,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_glitchProgressbarTexture: {fileID: 2800000, guid: e1bd5e76d63138c44bd3a4166f86a855,
     type: 3}
+  m_deadTexture: {fileID: 2800000, guid: cd8176aaa399fef40a4195c8a1f43c6d, type: 3}
+  m_deadTextureBlocked: {fileID: 2800000, guid: 879d1aeb905d14f4ea98a8db55cafaff,
+    type: 3}
 --- !u!1 &345466220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1828,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &345466223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2060,6 +2071,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &368376282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2259,6 +2271,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &388246770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2997,6 +3010,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &504709391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3116,6 +3130,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &531471080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,6 +3742,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &639569003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3846,6 +3862,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &670993385
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,6 +4356,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &803100550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4557,6 +4575,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &847908007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4638,6 +4657,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!23 &854698742
 Renderer:
   m_ObjectHideFlags: 0
@@ -4928,6 +4948,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &915657213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4994,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &915657216
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5096,6 +5118,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &925430266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5284,6 +5307,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1006357937
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,6 +5523,7 @@ MonoBehaviour:
   m_frameRate: 5
   m_randomStartFrame: 0
   m_pingPong: 1
+  m_random: 0
 --- !u!23 &1014740196
 Renderer:
   m_ObjectHideFlags: 0
@@ -5905,6 +5930,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1144484370
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,6 +6013,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 0
   m_pingPong: 0
+  m_random: 0
   m_glitchTexture: {fileID: 2800000, guid: 94428508a3c1c2d43a9ed28322e60189, type: 3}
   m_numberOfColumnsInGlitchTexture: 8
   m_glitchChance: 10
@@ -6476,6 +6503,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1214325327
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7144,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
   m_glitchTexture: {fileID: 2800000, guid: 94428508a3c1c2d43a9ed28322e60189, type: 3}
   m_numberOfColumnsInGlitchTexture: 8
   m_glitchChance: 10
@@ -7845,6 +7874,7 @@ MonoBehaviour:
   m_frameRate: 4
   m_randomStartFrame: 0
   m_pingPong: 0
+  m_random: 0
   m_currentAnimation: idle
   m_numberOfRows: 8
 --- !u!1 &1448975598
@@ -8413,6 +8443,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1613057827
 GameObject:
   m_ObjectHideFlags: 0
@@ -8495,6 +8526,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1650863973
 GameObject:
   m_ObjectHideFlags: 0
@@ -8864,6 +8896,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1688015415
 GameObject:
   m_ObjectHideFlags: 0
@@ -8946,6 +8979,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1706645216
 GameObject:
   m_ObjectHideFlags: 0
@@ -9631,6 +9665,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1875402395
 GameObject:
   m_ObjectHideFlags: 0
@@ -10474,6 +10509,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &1968532782
 GameObject:
   m_ObjectHideFlags: 0
@@ -10636,6 +10672,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!65 &1970035622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10755,6 +10792,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
 --- !u!1 &2002619047
 GameObject:
   m_ObjectHideFlags: 0
@@ -11170,6 +11208,7 @@ MonoBehaviour:
   m_frameRate: 10
   m_randomStartFrame: 1
   m_pingPong: 0
+  m_random: 0
   m_glitchTexture: {fileID: 2800000, guid: 94428508a3c1c2d43a9ed28322e60189, type: 3}
   m_numberOfColumnsInGlitchTexture: 8
   m_glitchChance: 10

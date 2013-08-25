@@ -314,8 +314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_glitchProgressbarTexture: {fileID: 2800000, guid: e1bd5e76d63138c44bd3a4166f86a855,
     type: 3}
-  m_deadTexture: {fileID: 0}
-  m_deadTextureBlocked: {fileID: 0}
+  m_deadTexture: {fileID: 2800000, guid: cd8176aaa399fef40a4195c8a1f43c6d, type: 3}
+  m_deadTextureBlocked: {fileID: 2800000, guid: 879d1aeb905d14f4ea98a8db55cafaff,
+    type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,6 +332,7 @@ MonoBehaviour:
   m_frameRate: 4
   m_randomStartFrame: 0
   m_pingPong: 0
+  m_random: 0
   m_currentAnimation: idle
   m_numberOfRows: 8
 --- !u!136 &13600000
