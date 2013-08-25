@@ -105,10 +105,24 @@ public class PlayerController : MonoBehaviour {
 				m_jumpState = JumpState.Jumping;
 				upPower = m_jumpHeight;
 				m_jumpTime = Time.time;
-				
+								
 				AudioClip clip = m_jumpSounds[Random.Range(0, m_jumpSounds.Length)];
 				m_audio.clip = clip;
 				m_audio.Play();
+			}
+		}
+		
+		if (m_jumpState == JumpState.Jumping)
+		{
+			if (!m_doGlitch)
+			{
+				currentAnimation = "jump";	
+				frameRate = 6;
+			}
+			else
+			{
+				currentAnimation = "glitch";	
+				frameRate = 12;	
 			}
 		}
 		

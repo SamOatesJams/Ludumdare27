@@ -16,6 +16,8 @@ public class AnimatedPlayerTexture : AnimatedTexture {
 		
 		m_keyFrame.Add("idle", new Vector2(0, 7));
 		m_keyFrame.Add("walk", new Vector2(8, 13));
+		m_keyFrame.Add("jump", new Vector2(16, 20));
+		m_keyFrame.Add("glitch", new Vector2(24, 27));
 		
 		if (!m_keyFrame.ContainsKey(m_currentAnimation))
 		{

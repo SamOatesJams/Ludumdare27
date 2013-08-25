@@ -194,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -343,6 +345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -430,6 +434,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -500,6 +506,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -630,6 +638,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -773,7 +783,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 1e7e95ae742c92946ba51f5908ff7cc7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .5
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -905,6 +915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -1064,6 +1076,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -1147,6 +1161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -1412,6 +1428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -1716,7 +1734,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: c18cedd3873c92c41b8f5968427e8ee0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .75
+  m_Volume: .25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2120,6 +2138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -2256,6 +2276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -2568,6 +2590,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -2853,6 +2877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -3046,6 +3072,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -3133,6 +3161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -3512,6 +3542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -3828,6 +3860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -3977,6 +4011,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -4226,6 +4262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -4313,6 +4351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -4586,6 +4626,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -4918,6 +4960,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -5328,6 +5372,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d8f6686af5d984f40b4f00336fa65e6e, type: 2}
+      propertyPath: NextLevelName
+      value: Level-003
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8f6686af5d984f40b4f00336fa65e6e, type: 2}
   m_RootGameObject: {fileID: 738844303}
@@ -5400,6 +5448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -5618,6 +5668,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -5705,6 +5757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -5815,6 +5869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -6163,6 +6219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -6312,6 +6370,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -6435,6 +6495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -6811,6 +6873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -6924,6 +6988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 4
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -6946,6 +7012,9 @@ MonoBehaviour:
   m_deadTexture: {fileID: 2800000, guid: cd8176aaa399fef40a4195c8a1f43c6d, type: 3}
   m_deadTextureBlocked: {fileID: 2800000, guid: 879d1aeb905d14f4ea98a8db55cafaff,
     type: 3}
+  m_textureMute: {fileID: 2800000, guid: e3135ec7aeccc9845a94b6555e0aabd7, type: 3}
+  m_textureSound: {fileID: 2800000, guid: 23632b9363cb2b14db3a1ccb98f6de2d, type: 3}
+  m_skin: {fileID: 11400000, guid: 37396effcca35a14f8fe22948af1a314, type: 2}
 --- !u!1 &603699331
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,6 +7801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -8298,6 +8369,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -8388,6 +8461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -8724,6 +8799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -8772,7 +8849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportDelay: 2
-  NextLevelName: Level-002
+  NextLevelName: Level-003
 --- !u!82 &738844306
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8916,6 +8993,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -8999,6 +9078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -9362,6 +9443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -9529,6 +9612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -9656,6 +9741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -10047,6 +10134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -10226,6 +10315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -10468,6 +10559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -10551,6 +10644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -10720,6 +10815,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 5
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 1
   m_random: 0
@@ -10874,6 +10971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -11402,6 +11501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -11759,6 +11860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -12124,6 +12227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -12211,6 +12316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -12497,6 +12604,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -12701,6 +12810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -13408,6 +13519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -13605,6 +13718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -13732,6 +13847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -16400,6 +16517,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -17486,6 +17605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -17556,6 +17677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -17646,6 +17769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -17958,6 +18083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -18151,6 +18278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -18429,6 +18558,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -18592,6 +18723,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -19189,6 +19322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -19316,6 +19451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -19403,6 +19540,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -19662,6 +19801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -19732,6 +19873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -19939,6 +20082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -20022,6 +20167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -20092,6 +20239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -20231,6 +20380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -20738,6 +20889,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -21044,6 +21197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -21184,6 +21339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -21271,6 +21428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -21424,6 +21583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -21832,6 +21993,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -21919,6 +22082,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -22216,6 +22381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -22303,6 +22470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -22386,6 +22555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -22469,6 +22640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -22556,6 +22729,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -22639,6 +22814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -22726,6 +22903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -23170,6 +23349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -23257,6 +23438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -23516,6 +23699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -23652,6 +23837,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 1
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 0
   m_pingPong: 0
   m_random: 0
@@ -23918,6 +24105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -24117,6 +24306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -24266,6 +24457,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 4
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 0
   m_random: 0
@@ -24506,6 +24699,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0
@@ -24593,6 +24788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_numberOfColumns: 8
   m_frameRate: 10
+  m_play: 1
+  m_loop: 1
   m_randomStartFrame: 1
   m_pingPong: 1
   m_random: 0

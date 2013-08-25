@@ -5,6 +5,8 @@ public class AnimatedTexture : MonoBehaviour {
 	
 	public int m_numberOfColumns = 4;
 	public int m_frameRate = 10;
+	public bool m_play = true;
+	public bool m_loop = true;
 	public bool m_randomStartFrame = false;
 	public bool m_pingPong = false;
 	public bool m_random = false;
@@ -30,6 +32,9 @@ public class AnimatedTexture : MonoBehaviour {
 	// Update is called once per frame
 	public void Update () {
 	
+		if (!m_play)
+			return;
+		
 		if (Time.time - m_lastFrameTime >= (1.0f / m_frameRate)) {
 			
 			if (!m_random) {
@@ -41,9 +46,18 @@ public class AnimatedTexture : MonoBehaviour {
 			if (m_currentColumn > (m_numberOfColumns - 1) || m_currentColumn < 0) {
 				if (!m_pingPong) {
 					m_currentColumn = 0;
+					if (!m_loop) {
+						m_play = false;
+						return;	
+					}
 				} else {
 					m_nextFrame = m_nextFrame * -1;
 					m_currentColumn += m_nextFrame;
+					if (!m_loop && m_currentColumn <= 0) {
+						m_currentColumn = 0;
+						m_play = false;
+						return;	
+					}
 				}				
 			}
 			m_lastFrameTime = Time.time;
