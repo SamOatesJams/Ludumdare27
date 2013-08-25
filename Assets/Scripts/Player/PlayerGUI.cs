@@ -67,7 +67,7 @@ public class PlayerGUI : MonoBehaviour {
 		
 		// life images
 		int lifesize = (int)(Screen.width * 0.033f);
-		for (int lifeIndex = 0; lifeIndex < m_player.m_lives; ++lifeIndex)
+		for (int lifeIndex = 0; lifeIndex < m_player.GetLives(); ++lifeIndex)
 		{
 			GUI.DrawTexture(
 				new Rect(

@@ -6559,7 +6559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d8f6686af5d984f40b4f00336fa65e6e, type: 2}
       propertyPath: NextLevelName
-      value: Level-003
+      value: Win
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8f6686af5d984f40b4f00336fa65e6e, type: 2}
@@ -23069,7 +23069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportDelay: 2
-  NextLevelName: Level-003
+  NextLevelName: Win
 --- !u!65 &1964759507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23669,7 +23669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c826f3f0d1f87544ab2040483940b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lives: 3
   m_speedModifier: 600
   m_jumpHeight: 30
   m_jumpSounds:

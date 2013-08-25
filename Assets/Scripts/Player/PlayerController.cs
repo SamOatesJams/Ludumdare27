@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	/**
 		Public variables 
 	*/
-	public int m_lives = 3;
+	public static int m_lives = 3;
 	public float m_speedModifier = 200.0f;		//!< A scalar to apply to all movement speeds
 	public float m_jumpHeight = 20.0f;			//!< The upwards force of the player jump
 	
@@ -49,12 +49,20 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		m_spawnPosition = this.transform.position;
 		m_texture = this.GetComponentInChildren<AnimatedPlayerTexture>();
-		m_blackQuad = Camera.main.transform.FindChild("black-quad").gameObject;
-		m_blackQuad.SetActive(false);
 		
-		m_glitchSound = this.transform.FindChild("glitch-sound").GetComponent<AudioSource>();
+		Transform quad = Camera.main.transform.FindChild("black-quad");
+		if (quad)
+		{
+			m_blackQuad = quad.gameObject;
+			m_blackQuad.SetActive(false);
+		}
 		
-		m_audio = this.GetComponent<AudioSource>();
+		Transform sound = this.transform.FindChild("glitch-sound");
+		if (sound)
+		{
+			m_glitchSound = sound.GetComponent<AudioSource>();
+			m_audio = this.GetComponent<AudioSource>();
+		}
 		
 		m_score += 10000;
 		m_levelStartScore = m_score;
@@ -64,6 +72,9 @@ public class PlayerController : MonoBehaviour {
 		\brief Update is called once per frame
 	*/
 	void Update () {
+		
+		if (!m_texture)
+			return;
 		
 		if (m_spawnTime != 0.0f && Time.time - m_spawnTime < 2.0f)
 			return;
@@ -143,7 +154,7 @@ public class PlayerController : MonoBehaviour {
 			}	
 		}
 
-		if (m_glitchTime == 0.0f && upDown < -0.9f && m_jumpState == JumpState.Jumping)
+		if (m_glitchTime == 0.0f && upDown < -0.1f && m_jumpState == JumpState.Jumping)
 		{
 			m_doGlitch = true;	
 			m_blackQuad.SetActive(true);
@@ -269,5 +280,10 @@ public class PlayerController : MonoBehaviour {
 	public string GetScoreString()
 	{
 		return m_score.ToString("000000000#");
+	}
+	
+	public int GetLives()
+	{
+		return m_lives;	
 	}
 }
