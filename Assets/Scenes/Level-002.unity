@@ -360,7 +360,6 @@ GameObject:
   - 4: {fileID: 18016687}
   - 33: {fileID: 18016690}
   - 23: {fileID: 18016689}
-  - 65: {fileID: 18016688}
   - 114: {fileID: 18016691}
   m_Layer: 0
   m_Name: water-tile
@@ -380,19 +379,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &18016688
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1401928205}
-  m_GameObject: {fileID: 18016686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &18016689
 Renderer:
   m_ObjectHideFlags: 0
@@ -549,6 +535,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 238048215}
@@ -564,7 +558,6 @@ GameObject:
   - 4: {fileID: 36211877}
   - 33: {fileID: 36211880}
   - 23: {fileID: 36211879}
-  - 65: {fileID: 36211878}
   - 114: {fileID: 36211881}
   m_Layer: 0
   m_Name: water-tile
@@ -584,19 +577,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &36211878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 865422175}
-  m_GameObject: {fileID: 36211876}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &36211879
 Renderer:
   m_ObjectHideFlags: 0
@@ -841,7 +821,6 @@ GameObject:
   - 4: {fileID: 60234202}
   - 33: {fileID: 60234205}
   - 23: {fileID: 60234204}
-  - 65: {fileID: 60234203}
   - 114: {fileID: 60234206}
   m_Layer: 0
   m_Name: water-tile
@@ -861,19 +840,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &60234203
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 523152552}
-  m_GameObject: {fileID: 60234201}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &60234204
 Renderer:
   m_ObjectHideFlags: 0
@@ -1002,7 +968,6 @@ GameObject:
   - 4: {fileID: 65052043}
   - 33: {fileID: 65052046}
   - 23: {fileID: 65052045}
-  - 65: {fileID: 65052044}
   - 114: {fileID: 65052047}
   m_Layer: 0
   m_Name: water-tile
@@ -1022,19 +987,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &65052044
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 254016515}
-  m_GameObject: {fileID: 65052042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &65052045
 Renderer:
   m_ObjectHideFlags: 0
@@ -1585,7 +1537,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1681109463}
   m_IsPrefabParent: 0
@@ -1691,7 +1644,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 737452333}
   m_IsPrefabParent: 0
@@ -2052,6 +2006,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
@@ -2435,7 +2397,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1162556522}
   m_IsPrefabParent: 0
@@ -2516,7 +2479,6 @@ GameObject:
   - 4: {fileID: 221086355}
   - 33: {fileID: 221086358}
   - 23: {fileID: 221086357}
-  - 65: {fileID: 221086356}
   - 114: {fileID: 221086359}
   m_Layer: 0
   m_Name: water-tile
@@ -2536,19 +2498,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &221086356
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1136050810}
-  m_GameObject: {fileID: 221086354}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &221086357
 Renderer:
   m_ObjectHideFlags: 0
@@ -2803,7 +2752,6 @@ GameObject:
   - 4: {fileID: 224669008}
   - 33: {fileID: 224669011}
   - 23: {fileID: 224669010}
-  - 65: {fileID: 224669009}
   - 114: {fileID: 224669012}
   m_Layer: 0
   m_Name: water-tile
@@ -2823,19 +2771,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &224669009
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 2146636110}
-  m_GameObject: {fileID: 224669007}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &224669010
 Renderer:
   m_ObjectHideFlags: 0
@@ -2998,7 +2933,6 @@ GameObject:
   - 4: {fileID: 235912440}
   - 33: {fileID: 235912443}
   - 23: {fileID: 235912442}
-  - 65: {fileID: 235912441}
   - 114: {fileID: 235912444}
   m_Layer: 0
   m_Name: water-tile
@@ -3018,19 +2952,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &235912441
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 956859155}
-  m_GameObject: {fileID: 235912439}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &235912442
 Renderer:
   m_ObjectHideFlags: 0
@@ -3118,8 +3039,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 130, y: 10, z: 10.0000019}
+  m_Center: {x: -60, y: -5, z: 10}
 --- !u!23 &238048218
 Renderer:
   m_ObjectHideFlags: 0
@@ -3457,7 +3378,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 65052042}
   m_IsPrefabParent: 0
@@ -3665,7 +3587,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1104970363}
   m_IsPrefabParent: 0
@@ -3705,7 +3628,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 2098260101}
   m_IsPrefabParent: 0
@@ -3786,7 +3710,6 @@ GameObject:
   - 4: {fileID: 296774808}
   - 33: {fileID: 296774811}
   - 23: {fileID: 296774810}
-  - 65: {fileID: 296774809}
   - 114: {fileID: 296774812}
   m_Layer: 0
   m_Name: water-tile
@@ -3806,19 +3729,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &296774809
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1412656057}
-  m_GameObject: {fileID: 296774807}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &296774810
 Renderer:
   m_ObjectHideFlags: 0
@@ -4177,7 +4087,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1523132655}
   m_IsPrefabParent: 0
@@ -4277,7 +4188,6 @@ GameObject:
   - 4: {fileID: 348357014}
   - 33: {fileID: 348357017}
   - 23: {fileID: 348357016}
-  - 65: {fileID: 348357015}
   - 114: {fileID: 348357018}
   m_Layer: 0
   m_Name: water-tile
@@ -4297,19 +4207,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &348357015
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1362229377}
-  m_GameObject: {fileID: 348357013}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &348357016
 Renderer:
   m_ObjectHideFlags: 0
@@ -4457,7 +4354,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1837092113}
   m_IsPrefabParent: 0
@@ -4537,7 +4435,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1582742458}
   m_IsPrefabParent: 0
@@ -4583,8 +4482,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 40, y: 10, z: 10.0000019}
+  m_Center: {x: -15, y: -5, z: 10}
 --- !u!23 &379617965
 Renderer:
   m_ObjectHideFlags: 0
@@ -5053,7 +4952,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1893583610}
   m_IsPrefabParent: 0
@@ -5683,7 +5583,6 @@ GameObject:
   - 4: {fileID: 487321443}
   - 33: {fileID: 487321446}
   - 23: {fileID: 487321445}
-  - 65: {fileID: 487321444}
   - 114: {fileID: 487321447}
   m_Layer: 0
   m_Name: water-tile
@@ -5703,19 +5602,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &487321444
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1046200580}
-  m_GameObject: {fileID: 487321442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &487321445
 Renderer:
   m_ObjectHideFlags: 0
@@ -5797,7 +5683,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1471191703}
   m_IsPrefabParent: 0
@@ -6071,7 +5958,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 60234201}
   m_IsPrefabParent: 0
@@ -6409,6 +6297,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
@@ -7012,6 +6908,7 @@ MonoBehaviour:
   m_deadTexture: {fileID: 2800000, guid: cd8176aaa399fef40a4195c8a1f43c6d, type: 3}
   m_deadTextureBlocked: {fileID: 2800000, guid: 879d1aeb905d14f4ea98a8db55cafaff,
     type: 3}
+  m_lifeIcon: {fileID: 2800000, guid: b35fd5cc5db9bda469111f09b20d6fe4, type: 3}
   m_textureMute: {fileID: 2800000, guid: e3135ec7aeccc9845a94b6555e0aabd7, type: 3}
   m_textureSound: {fileID: 2800000, guid: 23632b9363cb2b14db3a1ccb98f6de2d, type: 3}
   m_skin: {fileID: 11400000, guid: 37396effcca35a14f8fe22948af1a314, type: 2}
@@ -8027,7 +7924,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1152212157}
   m_IsPrefabParent: 0
@@ -8387,7 +8285,6 @@ GameObject:
   - 4: {fileID: 722208440}
   - 33: {fileID: 722208443}
   - 23: {fileID: 722208442}
-  - 65: {fileID: 722208441}
   - 114: {fileID: 722208444}
   m_Layer: 0
   m_Name: water-tile
@@ -8407,19 +8304,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &722208441
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 2061176191}
-  m_GameObject: {fileID: 722208439}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &722208442
 Renderer:
   m_ObjectHideFlags: 0
@@ -8725,7 +8609,6 @@ GameObject:
   - 4: {fileID: 737452334}
   - 33: {fileID: 737452337}
   - 23: {fileID: 737452336}
-  - 65: {fileID: 737452335}
   - 114: {fileID: 737452338}
   m_Layer: 0
   m_Name: water-tile
@@ -8745,19 +8628,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &737452335
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 116970401}
-  m_GameObject: {fileID: 737452333}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &737452336
 Renderer:
   m_ObjectHideFlags: 0
@@ -8919,7 +8789,6 @@ GameObject:
   - 4: {fileID: 738930422}
   - 33: {fileID: 738930425}
   - 23: {fileID: 738930424}
-  - 65: {fileID: 738930423}
   - 114: {fileID: 738930426}
   m_Layer: 0
   m_Name: water-tile
@@ -8939,19 +8808,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &738930423
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1784124628}
-  m_GameObject: {fileID: 738930421}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &738930424
 Renderer:
   m_ObjectHideFlags: 0
@@ -9118,7 +8974,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1668436364}
   m_IsPrefabParent: 0
@@ -9400,8 +9257,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 20, y: 10, z: 10.0000019}
+  m_Center: {x: -5, y: -5, z: 10}
 --- !u!23 &772458494
 Renderer:
   m_ObjectHideFlags: 0
@@ -9483,7 +9340,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1699783360}
   m_IsPrefabParent: 0
@@ -9523,7 +9381,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1174994240}
   m_IsPrefabParent: 0
@@ -9538,7 +9397,6 @@ GameObject:
   - 4: {fileID: 792778613}
   - 33: {fileID: 792778616}
   - 23: {fileID: 792778615}
-  - 65: {fileID: 792778614}
   - 114: {fileID: 792778617}
   m_Layer: 0
   m_Name: water-tile
@@ -9558,19 +9416,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &792778614
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 2062596582}
-  m_GameObject: {fileID: 792778612}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &792778615
 Renderer:
   m_ObjectHideFlags: 0
@@ -9652,7 +9497,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 2025073244}
   m_IsPrefabParent: 0
@@ -9667,7 +9513,6 @@ GameObject:
   - 4: {fileID: 810767870}
   - 33: {fileID: 810767873}
   - 23: {fileID: 810767872}
-  - 65: {fileID: 810767871}
   - 114: {fileID: 810767874}
   m_Layer: 0
   m_Name: water-tile
@@ -9687,19 +9532,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &810767871
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1004914713}
-  m_GameObject: {fileID: 810767869}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &810767872
 Renderer:
   m_ObjectHideFlags: 0
@@ -10177,7 +10009,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 36211876}
   m_IsPrefabParent: 0
@@ -10420,6 +10253,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
@@ -10684,7 +10525,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1903652512}
   m_IsPrefabParent: 0
@@ -10897,7 +10739,6 @@ GameObject:
   - 4: {fileID: 936936113}
   - 33: {fileID: 936936116}
   - 23: {fileID: 936936115}
-  - 65: {fileID: 936936114}
   - 114: {fileID: 936936117}
   m_Layer: 0
   m_Name: water-tile
@@ -10917,19 +10758,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &936936114
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1366944805}
-  m_GameObject: {fileID: 936936112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &936936115
 Renderer:
   m_ObjectHideFlags: 0
@@ -11194,7 +11022,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 235912439}
   m_IsPrefabParent: 0
@@ -11233,6 +11062,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
@@ -11274,7 +11111,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1113281467}
   m_IsPrefabParent: 0
@@ -11458,8 +11296,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 30, y: 10, z: 10.0000019}
+  m_Center: {x: -10, y: -5, z: 10}
 --- !u!23 &969540504
 Renderer:
   m_ObjectHideFlags: 0
@@ -11903,7 +11741,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 810767869}
   m_IsPrefabParent: 0
@@ -12025,7 +11864,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 487321442}
   m_IsPrefabParent: 0
@@ -12242,7 +12082,6 @@ GameObject:
   - 4: {fileID: 1066305484}
   - 33: {fileID: 1066305487}
   - 23: {fileID: 1066305486}
-  - 65: {fileID: 1066305485}
   - 114: {fileID: 1066305488}
   m_Layer: 0
   m_Name: water-tile
@@ -12262,19 +12101,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1066305485
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1285133013}
-  m_GameObject: {fileID: 1066305483}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1066305486
 Renderer:
   m_ObjectHideFlags: 0
@@ -12475,7 +12301,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1936336556}
   m_IsPrefabParent: 0
@@ -12515,6 +12342,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -3.09086232e-08
       objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 2038940210}
@@ -12530,7 +12365,6 @@ GameObject:
   - 4: {fileID: 1104970364}
   - 33: {fileID: 1104970367}
   - 23: {fileID: 1104970366}
-  - 65: {fileID: 1104970365}
   - 114: {fileID: 1104970368}
   m_Layer: 0
   m_Name: water-tile
@@ -12550,19 +12384,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1104970365
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 285678837}
-  m_GameObject: {fileID: 1104970363}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1104970366
 Renderer:
   m_ObjectHideFlags: 0
@@ -12736,7 +12557,6 @@ GameObject:
   - 4: {fileID: 1113281468}
   - 33: {fileID: 1113281471}
   - 23: {fileID: 1113281470}
-  - 65: {fileID: 1113281469}
   - 114: {fileID: 1113281472}
   m_Layer: 0
   m_Name: water-tile
@@ -12756,19 +12576,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1113281469
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 961018995}
-  m_GameObject: {fileID: 1113281467}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1113281470
 Renderer:
   m_ObjectHideFlags: 0
@@ -13313,7 +13120,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 221086354}
   m_IsPrefabParent: 0
@@ -13445,7 +13253,6 @@ GameObject:
   - 4: {fileID: 1152212158}
   - 33: {fileID: 1152212161}
   - 23: {fileID: 1152212160}
-  - 65: {fileID: 1152212159}
   - 114: {fileID: 1152212162}
   m_Layer: 0
   m_Name: water-tile
@@ -13465,19 +13272,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1152212159
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 662032106}
-  m_GameObject: {fileID: 1152212157}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1152212160
 Renderer:
   m_ObjectHideFlags: 0
@@ -13629,6 +13423,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 379617962}
@@ -13644,7 +13446,6 @@ GameObject:
   - 4: {fileID: 1162556523}
   - 33: {fileID: 1162556526}
   - 23: {fileID: 1162556525}
-  - 65: {fileID: 1162556524}
   - 114: {fileID: 1162556527}
   m_Layer: 0
   m_Name: water-tile
@@ -13664,19 +13465,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1162556524
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 208038331}
-  m_GameObject: {fileID: 1162556522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1162556525
 Renderer:
   m_ObjectHideFlags: 0
@@ -13773,7 +13561,6 @@ GameObject:
   - 4: {fileID: 1174994241}
   - 33: {fileID: 1174994244}
   - 23: {fileID: 1174994243}
-  - 65: {fileID: 1174994242}
   - 114: {fileID: 1174994245}
   m_Layer: 0
   m_Name: water-tile
@@ -13793,19 +13580,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1174994242
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 787565360}
-  m_GameObject: {fileID: 1174994240}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1174994243
 Renderer:
   m_ObjectHideFlags: 0
@@ -13887,7 +13661,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1952807803}
   m_IsPrefabParent: 0
@@ -13927,7 +13702,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 2074988157}
   m_IsPrefabParent: 0
@@ -15033,7 +14809,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1500505136}
   m_IsPrefabParent: 0
@@ -15139,7 +14916,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1066305483}
   m_IsPrefabParent: 0
@@ -16273,7 +16051,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 348357013}
   m_IsPrefabParent: 0
@@ -16379,7 +16158,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 936936112}
   m_IsPrefabParent: 0
@@ -16560,7 +16340,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 18016686}
   m_IsPrefabParent: 0
@@ -16629,7 +16410,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 296774807}
   m_IsPrefabParent: 0
@@ -16669,7 +16451,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1671486024}
   m_IsPrefabParent: 0
@@ -17531,7 +17314,6 @@ GameObject:
   - 4: {fileID: 1471191704}
   - 33: {fileID: 1471191707}
   - 23: {fileID: 1471191706}
-  - 65: {fileID: 1471191705}
   - 114: {fileID: 1471191708}
   m_Layer: 0
   m_Name: water-tile
@@ -17551,19 +17333,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1471191705
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 488490152}
-  m_GameObject: {fileID: 1471191703}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1471191706
 Renderer:
   m_ObjectHideFlags: 0
@@ -17695,7 +17464,6 @@ GameObject:
   - 4: {fileID: 1492804103}
   - 33: {fileID: 1492804106}
   - 23: {fileID: 1492804105}
-  - 65: {fileID: 1492804104}
   - 114: {fileID: 1492804107}
   m_Layer: 0
   m_Name: water-tile
@@ -17715,19 +17483,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1492804104
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1667265098}
-  m_GameObject: {fileID: 1492804102}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1492804105
 Renderer:
   m_ObjectHideFlags: 0
@@ -18009,7 +17764,6 @@ GameObject:
   - 4: {fileID: 1500505137}
   - 33: {fileID: 1500505140}
   - 23: {fileID: 1500505139}
-  - 65: {fileID: 1500505138}
   - 114: {fileID: 1500505141}
   m_Layer: 0
   m_Name: water-tile
@@ -18029,19 +17783,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1500505138
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1284695771}
-  m_GameObject: {fileID: 1500505136}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1500505139
 Renderer:
   m_ObjectHideFlags: 0
@@ -18204,7 +17945,6 @@ GameObject:
   - 4: {fileID: 1523132656}
   - 33: {fileID: 1523132659}
   - 23: {fileID: 1523132658}
-  - 65: {fileID: 1523132657}
   - 114: {fileID: 1523132660}
   m_Layer: 0
   m_Name: water-tile
@@ -18224,19 +17964,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1523132657
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 323550660}
-  m_GameObject: {fileID: 1523132655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1523132658
 Renderer:
   m_ObjectHideFlags: 0
@@ -18484,7 +18211,6 @@ GameObject:
   - 4: {fileID: 1582742459}
   - 33: {fileID: 1582742462}
   - 23: {fileID: 1582742461}
-  - 65: {fileID: 1582742460}
   - 114: {fileID: 1582742463}
   m_Layer: 0
   m_Name: water-tile
@@ -18504,19 +18230,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1582742460
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 376622462}
-  m_GameObject: {fileID: 1582742458}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1582742461
 Renderer:
   m_ObjectHideFlags: 0
@@ -18651,7 +18364,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1933009950}
   m_IsPrefabParent: 0
@@ -19362,7 +19076,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1492804102}
   m_IsPrefabParent: 0
@@ -19377,7 +19092,6 @@ GameObject:
   - 4: {fileID: 1668436368}
   - 33: {fileID: 1668436367}
   - 23: {fileID: 1668436366}
-  - 65: {fileID: 1668436365}
   - 114: {fileID: 1668436369}
   m_Layer: 0
   m_Name: water-tile
@@ -19386,19 +19100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1668436365
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 752064780}
-  m_GameObject: {fileID: 1668436364}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1668436366
 Renderer:
   m_ObjectHideFlags: 0
@@ -19466,7 +19167,6 @@ GameObject:
   - 4: {fileID: 1671486025}
   - 33: {fileID: 1671486028}
   - 23: {fileID: 1671486027}
-  - 65: {fileID: 1671486026}
   - 114: {fileID: 1671486029}
   m_Layer: 0
   m_Name: water-tile
@@ -19486,19 +19186,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1671486026
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1415341826}
-  m_GameObject: {fileID: 1671486024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1671486027
 Renderer:
   m_ObjectHideFlags: 0
@@ -19727,7 +19414,6 @@ GameObject:
   - 4: {fileID: 1681109464}
   - 33: {fileID: 1681109467}
   - 23: {fileID: 1681109466}
-  - 65: {fileID: 1681109465}
   - 114: {fileID: 1681109468}
   m_Layer: 0
   m_Name: water-tile
@@ -19747,19 +19433,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1681109465
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 113195434}
-  m_GameObject: {fileID: 1681109463}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1681109466
 Renderer:
   m_ObjectHideFlags: 0
@@ -20008,7 +19681,6 @@ GameObject:
   - 4: {fileID: 1699783361}
   - 33: {fileID: 1699783364}
   - 23: {fileID: 1699783363}
-  - 65: {fileID: 1699783362}
   - 114: {fileID: 1699783365}
   m_Layer: 0
   m_Name: water-tile
@@ -20028,19 +19700,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1699783362
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 780326703}
-  m_GameObject: {fileID: 1699783360}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1699783363
 Renderer:
   m_ObjectHideFlags: 0
@@ -20645,6 +20304,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 772458491}
@@ -20685,7 +20352,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 738930421}
   m_IsPrefabParent: 0
@@ -21296,8 +20964,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 40, y: 10, z: 10.0000019}
+  m_Center: {x: -15, y: -5, z: 10}
 --- !u!23 &1829189590
 Renderer:
   m_ObjectHideFlags: 0
@@ -21354,7 +21022,6 @@ GameObject:
   - 4: {fileID: 1831070043}
   - 33: {fileID: 1831070046}
   - 23: {fileID: 1831070045}
-  - 65: {fileID: 1831070044}
   - 114: {fileID: 1831070047}
   m_Layer: 0
   m_Name: water-tile
@@ -21374,19 +21041,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1831070044
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1982849716}
-  m_GameObject: {fileID: 1831070042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1831070045
 Renderer:
   m_ObjectHideFlags: 0
@@ -21509,7 +21163,6 @@ GameObject:
   - 4: {fileID: 1837092114}
   - 33: {fileID: 1837092117}
   - 23: {fileID: 1837092116}
-  - 65: {fileID: 1837092115}
   - 114: {fileID: 1837092118}
   m_Layer: 0
   m_Name: water-tile
@@ -21529,19 +21182,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1837092115
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 359284606}
-  m_GameObject: {fileID: 1837092113}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1837092116
 Renderer:
   m_ObjectHideFlags: 0
@@ -21919,7 +21559,6 @@ GameObject:
   - 4: {fileID: 1893583611}
   - 33: {fileID: 1893583614}
   - 23: {fileID: 1893583613}
-  - 65: {fileID: 1893583612}
   - 114: {fileID: 1893583615}
   m_Layer: 0
   m_Name: water-tile
@@ -21939,19 +21578,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1893583612
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 419303327}
-  m_GameObject: {fileID: 1893583610}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1893583613
 Renderer:
   m_ObjectHideFlags: 0
@@ -22008,7 +21634,6 @@ GameObject:
   - 4: {fileID: 1903652513}
   - 33: {fileID: 1903652516}
   - 23: {fileID: 1903652515}
-  - 65: {fileID: 1903652514}
   - 114: {fileID: 1903652517}
   m_Layer: 0
   m_Name: water-tile
@@ -22028,19 +21653,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1903652514
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 912780837}
-  m_GameObject: {fileID: 1903652512}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1903652515
 Renderer:
   m_ObjectHideFlags: 0
@@ -22307,7 +21919,6 @@ GameObject:
   - 4: {fileID: 1933009951}
   - 33: {fileID: 1933009954}
   - 23: {fileID: 1933009953}
-  - 65: {fileID: 1933009952}
   - 114: {fileID: 1933009955}
   m_Layer: 0
   m_Name: water-tile
@@ -22327,19 +21938,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &1933009952
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1589086007}
-  m_GameObject: {fileID: 1933009950}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1933009953
 Renderer:
   m_ObjectHideFlags: 0
@@ -22396,7 +21994,6 @@ GameObject:
   - 4: {fileID: 1936336557}
   - 33: {fileID: 1936336560}
   - 23: {fileID: 1936336559}
-  - 65: {fileID: 1936336558}
   - 114: {fileID: 1936336561}
   m_Layer: 0
   m_Name: water-tile
@@ -22416,19 +22013,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1936336558
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1087705220}
-  m_GameObject: {fileID: 1936336556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1936336559
 Renderer:
   m_ObjectHideFlags: 0
@@ -22655,7 +22239,6 @@ GameObject:
   - 4: {fileID: 1952807804}
   - 33: {fileID: 1952807807}
   - 23: {fileID: 1952807806}
-  - 65: {fileID: 1952807805}
   - 114: {fileID: 1952807808}
   m_Layer: 0
   m_Name: water-tile
@@ -22675,19 +22258,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &1952807805
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1178983870}
-  m_GameObject: {fileID: 1952807803}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &1952807806
 Renderer:
   m_ObjectHideFlags: 0
@@ -22860,8 +22430,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 130, y: 10, z: 10.0000019}
+  m_Center: {x: -60, y: -5, z: 10}
 --- !u!23 &1969815566
 Renderer:
   m_ObjectHideFlags: 0
@@ -23026,7 +22596,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 1831070042}
   m_IsPrefabParent: 0
@@ -23275,7 +22846,6 @@ GameObject:
   - 4: {fileID: 2025073245}
   - 33: {fileID: 2025073248}
   - 23: {fileID: 2025073247}
-  - 65: {fileID: 2025073246}
   - 114: {fileID: 2025073249}
   m_Layer: 0
   m_Name: water-tile
@@ -23295,19 +22865,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &2025073246
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 810317326}
-  m_GameObject: {fileID: 2025073244}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &2025073247
 Renderer:
   m_ObjectHideFlags: 0
@@ -23364,7 +22921,6 @@ GameObject:
   - 4: {fileID: 2026316128}
   - 33: {fileID: 2026316131}
   - 23: {fileID: 2026316130}
-  - 65: {fileID: 2026316129}
   - 114: {fileID: 2026316132}
   m_Layer: 0
   m_Name: water-tile
@@ -23384,19 +22940,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &2026316129
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 2033635829}
-  m_GameObject: {fileID: 2026316127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &2026316130
 Renderer:
   m_ObjectHideFlags: 0
@@ -23544,7 +23087,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 2026316127}
   m_IsPrefabParent: 0
@@ -23656,8 +23200,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 20, y: 10, z: 10.0000019}
+  m_Center: {x: -5, y: -5, z: 10}
 --- !u!23 &2038940213
 Renderer:
   m_ObjectHideFlags: 0
@@ -23910,7 +23454,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 722208439}
   m_IsPrefabParent: 0
@@ -23950,7 +23495,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 792778612}
   m_IsPrefabParent: 0
@@ -24062,8 +23608,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 30, y: 10, z: 10.0000019}
+  m_Center: {x: -10, y: -5, z: 10}
 --- !u!23 &2067561932
 Renderer:
   m_ObjectHideFlags: 0
@@ -24144,6 +23690,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Size.x
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
+      propertyPath: m_Center.x
+      value: -60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
@@ -24232,7 +23786,6 @@ GameObject:
   - 4: {fileID: 2074988158}
   - 33: {fileID: 2074988161}
   - 23: {fileID: 2074988160}
-  - 65: {fileID: 2074988159}
   - 114: {fileID: 2074988162}
   m_Layer: 0
   m_Name: water-tile
@@ -24252,19 +23805,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 315787434}
---- !u!65 &2074988159
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1179316376}
-  m_GameObject: {fileID: 2074988157}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &2074988160
 Renderer:
   m_ObjectHideFlags: 0
@@ -24538,7 +24078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c826f3f0d1f87544ab2040483940b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_health: 10
   m_speedModifier: 600
   m_jumpHeight: 30
   m_jumpSounds:
@@ -24625,7 +24164,6 @@ GameObject:
   - 4: {fileID: 2098260102}
   - 33: {fileID: 2098260105}
   - 23: {fileID: 2098260104}
-  - 65: {fileID: 2098260103}
   - 114: {fileID: 2098260106}
   m_Layer: 0
   m_Name: water-tile
@@ -24645,19 +24183,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 244261734}
---- !u!65 &2098260103
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb,
-    type: 2}
-  m_PrefabInternal: {fileID: 291626083}
-  m_GameObject: {fileID: 2098260101}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
 --- !u!23 &2098260104
 Renderer:
   m_ObjectHideFlags: 0
@@ -24745,8 +24270,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10.0000019}
-  m_Center: {x: 0, y: -5, z: 10}
+  m_Size: {x: 70, y: 10, z: 10.0000019}
+  m_Center: {x: -30, y: -5, z: 10}
 --- !u!23 &2110767613
 Renderer:
   m_ObjectHideFlags: 0
@@ -25197,7 +24722,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6be422417a132a743ba23076b13ccdbb, type: 2}
   m_RootGameObject: {fileID: 224669007}
   m_IsPrefabParent: 0

@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	/**
 		Public variables 
 	*/
-	public static int m_lives = 3;
+	
 	public float m_speedModifier = 200.0f;		//!< A scalar to apply to all movement speeds
 	public float m_jumpHeight = 20.0f;			//!< The upwards force of the player jump
 	
@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour {
 	/**
 		Private variables 
 	*/	
-
 	private JumpState m_jumpState = JumpState.Landed;
 	private float m_jumpTime = 0.0f;
 	private float m_glitchTime = 0.0f;
@@ -40,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 	private AudioSource m_glitchSound = null;
 	private AudioSource m_audio = null;
 	
+	private static int m_lives = 3;
 	private static int m_score = 0;	
 	private int m_levelStartScore = 0;
 	
@@ -180,6 +180,7 @@ public class PlayerController : MonoBehaviour {
 		m_texture.m_frameRate = frameRate;
 		m_texture.SetCurrentAnimation(currentAnimation, leftRight < 0.0f);
 		
+		leftRight = leftRight < 0.0f ? -1.0f : leftRight > 0.0f ? 1.0f : 0.0f;
 		this.rigidbody.AddForce(new Vector3(leftRight * (m_speedModifier * (m_glitchTime == 0.0f ? 1.0f : 1.5f)), upPower * (800.0f * (m_glitchTime == 0.0f ? 1.0f : 1.1f)), 0.0f));
 		Camera.main.transform.position = new Vector3(this.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);		
 	}
@@ -240,7 +241,7 @@ public class PlayerController : MonoBehaviour {
 		m_lives--;
 		if (m_lives < 0)
 		{
-			Application.LoadLevel("Title");	
+			Application.LoadLevel("Win");	
 		}
 		
 		m_levelStartScore -= 2500;
@@ -279,11 +280,17 @@ public class PlayerController : MonoBehaviour {
 	
 	public string GetScoreString()
 	{
-		return m_score.ToString("000000000#");
+		return m_score.ToString("0x00000000#");
 	}
 	
 	public int GetLives()
 	{
 		return m_lives;	
+	}
+	
+	public void Reset()
+	{
+		m_lives = 3;
+		m_score = 0;
 	}
 }
